@@ -1,0 +1,13 @@
+name: india-trade-plan
+description: End-to-end trade plan for an Indian stock or index derivative.
+steps:
+  - skill: nse-market-regime
+    prompt: "Give the current regime label and suggested max exposure."
+  - skill: india-stock-screener
+    prompt: "Find the setup for <stock>: trend template status, VCP pivot if any, stop level."
+  - skill: india-fno-expiry-planner
+    prompt: "If trading as options: read the option chain, calculate lot-based P&L at target and stop."
+  - skill: india-position-sizer
+    prompt: "Size the trade using the entry, stop and capital provided."
+  - skill: india-trade-journal
+    prompt: "Log the planned trade."

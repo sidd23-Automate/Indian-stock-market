@@ -1,0 +1,12 @@
+name: india-daily-brief
+description: Morning brief for Indian markets — regime, flows, sector rotation, watchlist scan.
+steps:
+  - skill: nse-market-regime
+    prompt: "Run today's market regime score. Use the latest NSE bhavcopy and India VIX."
+  - skill: fii-dii-flow-tracker
+    prompt: "Pull the latest 10 days of FII/DII data and classify the current flow pattern."
+  - skill: nse-sector-rotation
+    prompt: "Rank Nifty sectoral indices and list the top 3 leaders and 1-2 improving sectors."
+  - skill: india-stock-screener
+    prompt: "Run the trend-template screen on the leading sectors identified above."
+output: "Regime label, exposure ceiling, flow classification, sector quadrants, top 5 candidates."

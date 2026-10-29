@@ -1,0 +1,44 @@
+version: "1.0"
+description: India-market trading skills for Claude — NSE/BSE equity and derivatives.
+skills:
+  - name: nse-market-regime
+    path: skills/nse-market-regime
+    area: market_regime
+    api_needed: false
+    description: Score Indian market regime from Nifty, India VIX and breadth.
+
+  - name: fii-dii-flow-tracker
+    path: skills/fii-dii-flow-tracker
+    area: market_regime
+    api_needed: false
+    description: Track FII/DII cash and F&O flows; classify absorption vs selling.
+
+  - name: nse-sector-rotation
+    path: skills/nse-sector-rotation
+    area: market_regime
+    api_needed: false
+    description: Quadrant map of Nifty sectoral indices by relative strength.
+
+  - name: india-stock-screener
+    path: skills/india-stock-screener
+    area: swing_opportunity
+    api_needed: false
+    description: Trend template, VCP, CANSLIM and quality filters for Nifty 500.
+
+  - name: india-fno-expiry-planner
+    path: skills/india-fno-expiry-planner
+    area: trade_planning
+    api_needed: false
+    description: Option-chain reading, lot sizing and expiry event risk for NSE/BSE derivatives.
+
+  - name: india-position-sizer
+    path: skills/india-position-sizer
+    area: trade_planning
+    api_needed: false
+    description: INR risk-based sizing with full charge stack (STT, brokerage, GST, stamp).
+
+  - name: india-trade-journal
+    path: skills/india-trade-journal
+    area: trade_memory
+    api_needed: false
+    description: Log and review Indian equity/F&O trades with R-multiples and tax-bucket tagging.
